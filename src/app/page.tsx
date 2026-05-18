@@ -6,6 +6,7 @@ import { Experience } from "@/components/Experience";
 import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -13,11 +14,21 @@ export default function Home() {
       <Header />
       <main className="mx-auto max-w-4xl px-6 sm:px-8">
         <Hero />
-        <About />
-        <Highlights />
-        <Experience />
-        <Education />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Highlights />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Education />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
     </>

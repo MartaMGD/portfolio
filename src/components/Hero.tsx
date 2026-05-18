@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section id="top" className="pb-20 pt-20 sm:pt-28">
       <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:gap-10">
-        <div className="relative shrink-0">
+        <div className="relative shrink-0 animate-float">
           <div
             aria-hidden
             className="absolute -inset-2 rounded-full bg-gradient-to-br from-[var(--color-accent-from)] to-[var(--color-accent-to)] opacity-70 blur-xl"

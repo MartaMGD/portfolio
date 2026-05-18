@@ -67,6 +67,8 @@ body::before {
     var(--color-accent-from) 0%,
     transparent 70%
   );
+  transform: translate3d(0, calc(var(--scroll-y, 0) * 0.35px), 0);
+  animation: drift 14s ease-in-out infinite alternate;
 }
 
 body::after {
@@ -79,6 +81,36 @@ body::after {
     var(--color-accent-to) 0%,
     transparent 70%
   );
+  transform: translate3d(0, calc(var(--scroll-y, 0) * -0.25px), 0);
+  animation: drift-reverse 18s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  from { translate: 0 0; }
+  to { translate: 40px 30px; }
+}
+
+@keyframes drift-reverse {
+  from { translate: 0 0; }
+  to { translate: -50px 20px; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .animate-float {
+    animation: none !important;
+    transform: none !important;
+  }
 }
 
 .dark body::before,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { profile } from "@/data/profile";
+import { ScrollEffects } from "@/components/ScrollEffects";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,7 +34,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollEffects />
+        {children}
+      </body>
     </html>
   );
 }
