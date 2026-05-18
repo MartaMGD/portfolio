@@ -20,13 +20,16 @@ export function Projects() {
             key={project.name}
             className="group relative overflow-hidden rounded-2xl border border-[var(--color-subtle)] bg-[var(--color-card)]/60 backdrop-blur-sm transition-all hover:border-[var(--color-accent-to)]/60 hover:shadow-lg hover:shadow-[var(--color-glow)]"
           >
-            {project.image && (
+            {project.preview && (
               <div className="relative aspect-[16/9] overflow-hidden border-b border-[var(--color-subtle)] bg-[var(--color-subtle)]/30">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={project.image}
-                  alt={`Preview de ${project.name}`}
-                  loading="lazy"
+                <video
+                  src={project.preview}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label={`Preview de ${project.name}`}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
               </div>

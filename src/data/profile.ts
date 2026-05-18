@@ -123,7 +123,7 @@ export const profile = {
       status: "En desarrollo",
       description:
         "E-commerce demo con 40 productos curados (5 categorías, sellos eco como orgánico, vegano y cruelty-free), favoritos y carrito persistentes, modo bilingüe ES/EN y formulario de contacto tipado con Zod. Hero con video en loop, parallax sutil y reveals en scroll. Pensado para enseñar arquitectura frontend moderna en un dominio que me interesa.",
-      image: "/bio-shelf-preview.gif",
+      preview: "/bio-shelf-preview.mp4",
       stack: [
         "Next.js 16",
         "TypeScript",
