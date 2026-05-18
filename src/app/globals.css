@@ -6,19 +6,28 @@
   --font-sans:
     var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, sans-serif;
-  --color-background: #fafaf9;
-  --color-foreground: #18181b;
-  --color-muted: #71717a;
-  --color-subtle: #e4e4e7;
-  --color-accent: #18181b;
+
+  /* Light mode — rosa pálido + acentos morados */
+  --color-background: #fdf4ff;
+  --color-foreground: #1a0b2e;
+  --color-muted: #6b21a8;
+  --color-subtle: #e9d5ff;
+  --color-card: #faf5ff;
+  --color-accent-from: #a855f7;
+  --color-accent-to: #ec4899;
+  --color-glow: rgba(168, 85, 247, 0.35);
 }
 
 .dark {
-  --color-background: #0a0a0a;
+  /* Dark mode — fondo casi negro con tinte morado profundo */
+  --color-background: #0a0312;
   --color-foreground: #fafafa;
-  --color-muted: #a1a1aa;
-  --color-subtle: #27272a;
-  --color-accent: #fafafa;
+  --color-muted: #c084fc;
+  --color-subtle: #2e1065;
+  --color-card: #150826;
+  --color-accent-from: #c084fc;
+  --color-accent-to: #f472b6;
+  --color-glow: rgba(192, 132, 252, 0.45);
 }
 
 html,
@@ -28,20 +37,100 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Glow orbs de fondo — efecto futurista */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.55;
+}
+
+body::before {
+  width: 520px;
+  height: 520px;
+  top: -180px;
+  left: -120px;
+  background: radial-gradient(
+    circle,
+    var(--color-accent-from) 0%,
+    transparent 70%
+  );
+}
+
+body::after {
+  width: 600px;
+  height: 600px;
+  top: 35vh;
+  right: -200px;
+  background: radial-gradient(
+    circle,
+    var(--color-accent-to) 0%,
+    transparent 70%
+  );
+}
+
+.dark body::before,
+.dark body::after {
+  opacity: 0.35;
+}
+
+/* Mantén el contenido por encima de los orbs */
+main,
+header,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient text helper */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-from),
+    var(--color-accent-to)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Selección de texto */
 ::selection {
-  background: var(--color-foreground);
-  color: var(--color-background);
+  background: var(--color-accent-to);
+  color: white;
 }
 
 /* Focus styles consistentes y accesibles */
 *:focus-visible {
-  outline: 2px solid var(--color-foreground);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-accent-to);
+  outline-offset: 3px;
   border-radius: 2px;
+}
+
+/* Sutil scrollbar morada en webkit */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-subtle);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
 }
