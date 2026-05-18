@@ -48,7 +48,7 @@ export function Hero() {
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <a
           href={`mailto:${profile.email}`}
-          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-accent-from)] to-[var(--color-accent-to)] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[var(--color-glow)] transition-transform hover:scale-[1.03]"
+          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-accent-from)] to-[var(--color-accent-to)] px-6 py-2.5 text-sm font-semibold text-[#1a0b2e] shadow-lg shadow-[var(--color-glow)] transition-transform hover:scale-[1.03]"
         >
           <MailIcon />
           Escríbeme
@@ -79,7 +79,7 @@ export function Hero() {
             key={item.value}
             className="rounded-2xl border border-[var(--color-subtle)] bg-[var(--color-card)]/60 p-5 backdrop-blur-sm"
           >
-            <dt className="text-2xl font-semibold gradient-text">
+            <dt className="text-2xl font-semibold text-[var(--color-foreground)]">
               {item.value}
             </dt>
             <dd className="mt-1 text-xs text-[var(--color-muted)]">

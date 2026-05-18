@@ -5,7 +5,7 @@
 export const profile = {
   // ----- DATOS BÁSICOS -----
   name: "Marta González",
-  role: "Frontend Developer · IA",
+  role: "Frontend × IA · 4 años construyendo producto",
   tagline:
     "Frontend developer con +4 años construyendo un SaaS B2B multi-tenant para el sector asegurador. Especializada en React, Next.js y TypeScript, integrando capacidades de LLMs y agentes basados en MCP en interfaces en producción.",
   location: "Málaga, España · Híbrido",
@@ -21,9 +21,9 @@ export const profile = {
 
   // ----- HIGHLIGHTS RÁPIDOS -----
   highlights: [
-    { value: "+4 años", label: "construyendo el mismo SaaS desde cero" },
-    { value: "9", label: "locales en producción · ~3.100 strings" },
-    { value: "C1", label: "inglés certificado Cambridge" },
+    { value: "+4 años", label: "Construyendo el mismo SaaS desde cero" },
+    { value: "9", label: "Locales en producción · ~3.100 strings" },
+    { value: "C1", label: "Inglés certificado Cambridge" },
   ],
 
   // ----- SOBRE MÍ -----

@@ -48,7 +48,7 @@ export function Contact() {
               rel={external ? "noopener noreferrer" : undefined}
               className="group flex items-center gap-4 rounded-2xl border border-[var(--color-subtle)] bg-[var(--color-card)]/60 p-4 backdrop-blur-sm transition-all hover:border-[var(--color-accent-to)] hover:shadow-md hover:shadow-[var(--color-glow)]"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-accent-from)] to-[var(--color-accent-to)] text-white">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-accent-from)] to-[var(--color-accent-to)] text-[#1a0b2e]">
                 <Icon />
               </span>
               <span className="flex-1">

@@ -6,7 +6,7 @@ export function Highlights() {
       id="highlights"
       className="border-t border-[var(--color-subtle)] py-20"
     >
-      <h2 className="text-xs font-semibold uppercase tracking-[0.25em] gradient-text">
+      <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--color-foreground)]">
         IA aplicada & trabajo destacado
       </h2>
       <p className="mt-4 max-w-2xl text-sm text-[var(--color-muted)]">
